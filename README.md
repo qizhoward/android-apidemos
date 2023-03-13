@@ -8,3 +8,8 @@ A fork of Google's Android ApiDemos application, used for testing Appium
 > npm run build
 
 Then, `./apks/ApiDemos-debug.apk` will be generated.
+
+
+
+
+    Android API Demo
