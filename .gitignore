@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+/node_modules
+*.log
+apks/
+package-lock.json*
+app/build/

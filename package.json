@@ -1,0 +1,48 @@
+{
+  "name": "android-apidemos",
+  "version": "4.1.1",
+  "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "directories": {},
+  "scripts": {
+    "bump-gradle-version": "node ./scripts/gradle-version-update.js --package-version=${npm_package_version} && git add app/build.gradle",
+    "build": "node ./scripts/build.js",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "npm run build",
+    "version": "npm run bump-gradle-version && npm run build",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/android-apidemos.git"
+  },
+  "keywords": [
+    "appium",
+    "android",
+    "apidemos"
+  ],
+  "author": "Appium Contributors",
+  "bugs": {
+    "url": "https://github.com/appium/android-apidemos/issues"
+  },
+  "homepage": "https://github.com/appium/android-apidemos",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "files": [
+    "./index.js",
+    "./apks"
+  ],
+  "devDependencies": {
+    "@appium/eslint-config-appium": "^6.0.0",
+    "eslint": "^7.32.0",
+    "fancy-log": "^2.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^20.0.2",
+    "semver": "^7.3.7",
+    "teen_process": "^2.0.2"
+  }
+}
